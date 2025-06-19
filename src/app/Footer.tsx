@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Flex, Text, Heading, Button, Grid } from "@radix-ui/themes";
+import { Flex, Text, Heading, Grid } from "@radix-ui/themes";
 import { HiOutlinePhone, HiOutlineEnvelope } from "react-icons/hi2";
 
 const Footer: React.FC = () => {
@@ -39,15 +39,14 @@ const Footer: React.FC = () => {
               Get a free, no-obligation quote in seconds.
             </Text>
             <Link href="/#quote-form" passHref>
-              <Button
-                size="3"
-                className="w-full sm:w-auto cursor-pointer font-bold text-gray-900"
+              <button
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#eafc2b] hover:bg-[#dceb29] text-gray-900 font-bold rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#eafc2b] focus:ring-offset-2 w-full sm:w-auto"
               >
                 Get A Quote
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Button>
+              </button>
             </Link>
           </Flex>
         </Grid>
