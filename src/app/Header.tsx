@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { Button } from "@radix-ui/themes";
 import Link from "next/link";
 
 const NAV_LINKS = [
@@ -66,15 +67,19 @@ const Header: React.FC = () => {
               (940) 536-9626
             </a>
             <Link href="/#quote-form" passHref>
-              <button
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#eafc2b] hover:bg-[#dceb29] text-gray-900 font-bold rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#eafc2b] focus:ring-offset-2"
+              <Button
+                asChild
+                size="3"
+                className="!cursor-pointer font-bold text-gray-900"
                 aria-label="Get a quote"
               >
-                Get A Quote
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </button>
+                <a>
+                  Get A Quote
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+              </Button>
             </Link>
           </div>
 
@@ -156,15 +161,19 @@ const Header: React.FC = () => {
                   </Dialog.Close>
                   <Dialog.Close asChild>
                     <Link href="/#quote-form" passHref>
-                      <button
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[#eafc2b] hover:bg-[#dceb29] text-gray-900 font-bold rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#eafc2b] focus:ring-offset-2"
+                      <Button
+                        asChild
+                        size="3"
+                        className="!w-full cursor-pointer font-bold text-gray-900"
                         aria-label="Get a quote"
                       >
-                        Get A Quote
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </button>
+                        <a>
+                          Get A Quote
+                          <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        </a>
+                      </Button>
                     </Link>
                   </Dialog.Close>
                 </div>

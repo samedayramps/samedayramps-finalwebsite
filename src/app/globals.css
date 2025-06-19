@@ -16,33 +16,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Force light mode - override any dark mode styles */
-* {
-  color-scheme: light !important;
-}
-
-/* Completely disable dark mode classes */
-.dark,
-[class*="dark:"] {
-  background-color: transparent !important;
-  color: inherit !important;
-  border-color: inherit !important;
-}
-
-/* Force light backgrounds */
-.dark\:bg-black,
-.dark\:bg-gray-900,
-.dark\:bg-gray-800,
-.dark\:bg-gray-950 {
-  background-color: transparent !important;
-}
-
-/* Force light text */
-.dark\:text-white,
-.dark\:text-gray-200,
-.dark\:text-gray-300,
-.dark\:text-gray-400 {
-  color: inherit !important;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 body {

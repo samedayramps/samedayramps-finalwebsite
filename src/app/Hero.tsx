@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Flex } from "@radix-ui/themes";
+import { Flex, Button } from "@radix-ui/themes";
 
 const Hero: React.FC = () => (
   <section className="relative w-full h-[500px] sm:h-[600px] lg:h-[700px]">
@@ -28,15 +28,19 @@ const Hero: React.FC = () => (
           Installed within 24 hours across Dallas-Fort Worth
         </p>
         <Link href="/#quote-form" passHref>
-          <button
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#eafc2b] hover:bg-[#dceb29] text-gray-900 font-bold rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#eafc2b] focus:ring-offset-2"
+          <Button
+            asChild
+            size="3"
+            className="cursor-pointer font-bold text-gray-900"
             aria-label="Get a quote"
           >
-            Get A Quote
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </button>
+            <a>
+              Get A Quote
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </Button>
         </Link>
       </Flex>
     </div>
